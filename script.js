@@ -23,7 +23,7 @@ let playerScore = 0 ;
 let computerScore = 0 ;
 
 function playRound(playerSelection, computerSelection) {
-    if (!(playerSelection.toUpperCase() === "ROCK" || playerSelection.toUpperCase() === "PAPER" || playerSelection.toUpperCase() === "SCISSORS")) {
+    if (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS") {
         return ("Please enter either Rock, Paper or Scissors to play (not case sensitive bro!)") ;
     } else if (playerSelection.toUpperCase() === "ROCK" && computerSelection === "SCISSORS") {
         return ["Player wins, Rock beats Scissors", playerScore +=1] ;
