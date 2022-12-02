@@ -13,7 +13,7 @@
 // Run the game 5 times, totalling up the computer and player results each round 
 // Calculate who won at the end of the 5 rounds and return an appropriate message, i.e. the player has won 
 
-const results = ["ROCK", "PAPER", "SCISSORS"] ;
+const results = [`ROCK`, `PAPER`, `SCISSORS`] ;
 
 function getComputerChoice() {
     return (results[Math.floor(Math.random()*results.length)]) ;
@@ -23,12 +23,12 @@ let playerScore = 0 ;
 let computerScore = 0 ;
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS") {
-        return ("Please enter either Rock, Paper or Scissors to play (not case sensitive bro!)") ;
+    if (playerSelection.toUpperCase() !== `ROCK` && playerSelection.toUpperCase() !== `PAPER` && playerSelection.toUpperCase() !== `SCISSORS`) {
+        return (`Please enter either Rock, Paper or Scissors to play (not case sensitive bro!)`) ;
     } else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection === "SCISSORS") || (playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK") || (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER")) {
-        return ["Player wins, ${playerSelection} beats ${computerSelection}", playerScore +=1] ;
+        return [`Player wins ${playerSelection} beats ${computerSelection}`, playerScore +=1] ;
     } else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection === "PAPER") || (playerSelection.toUpperCase() === "PAPER" && computerSelection === "SCISSORS") || (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "ROCK")) {
-        return ["Computer wins, ${computerSelection} beats ${playerSelection}", computerScore +=1] ;
+        return [`Computer wins ${computerSelection} beats ${playerSelection}`, computerScore +=1] ;
     } else if (playerSelection.toUpperCase() === computerSelection ) {
        return ("It's a draw") ;
     }
