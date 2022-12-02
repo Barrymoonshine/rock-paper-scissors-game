@@ -13,7 +13,7 @@
 // Run the game 5 times, totalling up the computer and player results each round 
 // Calculate who won at the end of the 5 rounds and return an appropriate message, i.e. the player has won 
 
-const results = [`ROCK`, `PAPER`, `SCISSORS`] ;
+const results = [`rock`, `paper`, `scissors`] ;
 
 function getComputerChoice() {
     return (results[Math.floor(Math.random()*results.length)]) ;
@@ -23,20 +23,20 @@ let playerScore = 0 ;
 let computerScore = 0 ;
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toUpperCase() !== `ROCK` && playerSelection.toUpperCase() !== `PAPER` && playerSelection.toUpperCase() !== `SCISSORS`) {
+    if (playerSelection.toLowerCase() !== `rock` && playerSelection.toLowerCase() !== `paper` && playerSelection.toLowerCase() !== `scissors`) {
         return (`Please enter either Rock, Paper or Scissors to play (not case sensitive bro!)`) ;
-    } else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection === "SCISSORS") || (playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK") || (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER")) {
+    } else if ((playerSelection.toLowerCase() === `rock` && computerSelection === `scissors`) || (playerSelection.toLowerCase() === `paper` && computerSelection === `rock`) || (playerSelection.toLowerCase() === `scissors` && computerSelection === `paper`)) {
         return [`Player wins ${playerSelection} beats ${computerSelection}`, playerScore +=1] ;
-    } else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection === "PAPER") || (playerSelection.toUpperCase() === "PAPER" && computerSelection === "SCISSORS") || (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "ROCK")) {
+    } else if ((playerSelection.toLowerCase() === `rock` && computerSelection === `paper`) || (playerSelection.toLowerCase() === `paper` && computerSelection === `scissors`) || (playerSelection.toLowerCase() === `scissors` && computerSelection === `rock`)) {
         return [`Computer wins ${computerSelection} beats ${playerSelection}`, computerScore +=1] ;
-    } else if (playerSelection.toUpperCase() === computerSelection ) {
-       return ("It's a draw") ;
+    } else if (playerSelection.toLowerCase() === computerSelection ) {
+       return (`It's a draw`) ;
     }
 }
 
 function game () {
     for (let i = 0; i < 5; i++) { 
-        let playerSelection = prompt("Please enter either rock, paper or scissors (not case sensitive!)") ;
+        let playerSelection = prompt(`Please enter either rock, paper or scissors (not case sensitive!)`) ;
         let computerSelection = getComputerChoice() ;
         console.log(playRound(playerSelection,computerSelection)) ;
         console.log(playerScore) ;
@@ -48,11 +48,11 @@ game () ;
 
 function gameResults () {
     if (playerScore > computerScore) {
-        return "Humans have won to fight another day!" ;
+        return `Humans have won to fight another day!` ;
     } else if (playerScore < computerScore) {
-        return "The computers have won, run for your life!" ;
+        return `The computers have won, run for your life!` ;
     } else if (playerScore === computerScore) {
-        return "It's a drawer!... Fight again!?"
+        return `It's a draw!... Fight again!?` ;
     }
 }
 
