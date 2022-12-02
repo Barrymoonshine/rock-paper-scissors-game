@@ -13,47 +13,47 @@
 // Run the game 5 times, totalling up the computer and player results each round 
 // Calculate who won at the end of the 5 rounds and return an appropriate message, i.e. the player has won 
 
-const results = [`rock`, `paper`, `scissors`] ;
+const results = [`rock`, `paper`, `scissors`];
 
 function getComputerChoice() {
-    return (results[Math.floor(Math.random()*results.length)]) ;
+    return (results[Math.floor(Math.random()*results.length)]);
 } 
 
-let playerScore = 0 ;
-let computerScore = 0 ;
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() !== `rock` && playerSelection.toLowerCase() !== `paper` && playerSelection.toLowerCase() !== `scissors`) {
-        return (`Please enter either Rock, Paper or Scissors to play (not case sensitive bro!)`) ;
+        return (`Please enter either Rock, Paper or Scissors to play (not case sensitive bro!)`);
     } else if ((playerSelection.toLowerCase() === `rock` && computerSelection === `scissors`) || (playerSelection.toLowerCase() === `paper` && computerSelection === `rock`) || (playerSelection.toLowerCase() === `scissors` && computerSelection === `paper`)) {
-        return [`Player wins ${playerSelection} beats ${computerSelection}`, playerScore +=1] ;
+        return [`Player wins ${playerSelection} beats ${computerSelection}`, playerScore +=1];
     } else if ((playerSelection.toLowerCase() === `rock` && computerSelection === `paper`) || (playerSelection.toLowerCase() === `paper` && computerSelection === `scissors`) || (playerSelection.toLowerCase() === `scissors` && computerSelection === `rock`)) {
-        return [`Computer wins ${computerSelection} beats ${playerSelection}`, computerScore +=1] ;
+        return [`Computer wins ${computerSelection} beats ${playerSelection}`, computerScore +=1];
     } else if (playerSelection.toLowerCase() === computerSelection ) {
-       return (`It's a draw`) ;
+       return (`It's a draw`);
     }
 }
 
-function game () {
+function game() {
     for (let i = 0; i < 5; i++) { 
-        let playerSelection = prompt(`Please enter either rock, paper or scissors (not case sensitive!)`) ;
-        let computerSelection = getComputerChoice() ;
-        console.log(playRound(playerSelection,computerSelection)) ;
-        console.log(playerScore) ;
-        console.log(computerScore) ;
+        let playerSelection = prompt(`Please enter either rock, paper or scissors (not case sensitive!)`);
+        let computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection,computerSelection));
+        console.log(playerScore);
+        console.log(computerScore);
     }
 }
 
-game () ;
+game() ;
 
-function gameResults () {
+function gameResults() {
     if (playerScore > computerScore) {
-        return `Humans have won to fight another day!` ;
+        return `Humans have won to fight another day!`;
     } else if (playerScore < computerScore) {
-        return `The computers have won, run for your life!` ;
+        return `The computers have won, run for your life!`;
     } else if (playerScore === computerScore) {
-        return `It's a draw!... Fight again!?` ;
+        return `It's a draw!... Fight again!?`;
     }
 }
 
-console.log(gameResults ()) ;
+console.log(gameResults());
