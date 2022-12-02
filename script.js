@@ -25,20 +25,12 @@ let computerScore = 0 ;
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS") {
         return ("Please enter either Rock, Paper or Scissors to play (not case sensitive bro!)") ;
-    } else if (playerSelection.toUpperCase() === "ROCK" && computerSelection === "SCISSORS") {
-        return ["Player wins, Rock beats Scissors", playerScore +=1] ;
-    } else if (playerSelection.toUpperCase() === "ROCK" && computerSelection === "PAPER") {
-        return ["Computer wins, Paper beats Rock", computerScore +=1] ;
-    } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK") {
-        return ["Player wins, Paper beats Rock", playerScore +=1] ;
-    } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection === "SCISSORS") {
-        return ["Computer wins, Scissors beats Paper", computerScore +=1] ;
-    } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER") {
-        return ["Player wins, Scissors beats Paper", playerScore +=1] ;
-    } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "ROCK") {
-        return ["Computer wins, Rock beats Scissors", computerScore +=1] ;
+    } else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection === "SCISSORS") || (playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK") || (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER")) {
+        return ["Player wins, ${playerSelection} beats ${computerSelection}", playerScore +=1] ;
+    } else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection === "PAPER") || (playerSelection.toUpperCase() === "PAPER" && computerSelection === "SCISSORS") || (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "ROCK")) {
+        return ["Computer wins, ${computerSelection} beats ${playerSelection}", computerScore +=1] ;
     } else if (playerSelection.toUpperCase() === computerSelection ) {
-       return ("It's a drawer") ;
+       return ("It's a draw") ;
     }
 }
 
