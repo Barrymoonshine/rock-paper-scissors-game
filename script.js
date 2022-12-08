@@ -34,15 +34,19 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) { 
-        let playerSelection = prompt(`Please enter either rock, paper or scissors (not case sensitive!)`);
-        let computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection,computerSelection));
-        console.log(playerScore);
-        console.log(computerScore);
-    }
-}
+const btn = document.querySelectorAll('#btn');
+
+btn.addEventListener('click', playRound);
+
+// function game() {
+//     for (let i = 0; i < 5; i++) { 
+//         let playerSelection = prompt(`Please enter either rock, paper or scissors (not case sensitive!)`);
+//         let computerSelection = getComputerChoice();
+//         console.log(playRound(playerSelection,computerSelection));
+//         console.log(playerScore);
+//         console.log(computerScore);
+//     }
+// }
 
 game() ;
 
