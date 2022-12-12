@@ -41,7 +41,7 @@ function playRound(playerSelection, computerSelection) {
     } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
         return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br />`];
     } else if (playerSelection === computerSelection ) {
-       return container.innerHTML += `It's a draw <br />`;
+       return container.innerHTML += `It's a draw, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`;
     }
  }
   else if (playerScore == 4 && computerScore < 4) {
@@ -50,7 +50,7 @@ function playRound(playerSelection, computerSelection) {
   } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
       return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br />`];
   } else if (playerSelection === computerSelection ) {
-     return container.innerHTML += `It's a draw <br />`;
+     return container.innerHTML += `It's a draw, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`;
   }
 }
   else if (playerScore < 4 && computerScore == 4) { 
@@ -59,7 +59,7 @@ function playRound(playerSelection, computerSelection) {
   } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
       return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br /> <h2> The computers have won, run for your life! <h2>`];
   } else if (playerSelection === computerSelection ) {
-     return container.innerHTML += `It's a draw <br />`;
+     return container.innerHTML += `It's a draw, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`;
   }
 }
   else if (playerScore == 4 && computerScore == 4) { 
@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection) {
   } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
       return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br /> <h2> The computers have won, run for your life! <h2>`];
   } else if (playerSelection === computerSelection ) {
-     return container.innerHTML += `It's a draw <br />`;
+     return container.innerHTML += `It's a draw, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`;
   }  
 }
 }
