@@ -4,6 +4,7 @@
 }
 
 body {
+    min-height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +20,6 @@ background-image: url("https://www.transparenttextures.com/patterns/brick-wall-d
     font-size: 75px;
     font-weight: bold;
     padding: 25px 100px 25px 100px;
-    background: ;
     font-family: Osaka;
     width: 100%;
     display: flex;
@@ -90,8 +90,26 @@ background-image: url("https://www.transparenttextures.com/patterns/brick-wall-d
     cursor:pointer;
     font-size: large;
     font-weight:800;
+    margin-bottom: 10px;
 }
 
 #resetBtn:hover{
     border:5px solid grey; 
+}
+
+#container {
+    color: orange;
+}
+
+.footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #080a0cfb;
+    color: orange;
+    padding: 50px 0px 50px 0px;
+    font-size: 15px;
+    width: 100%;
+    height: 1px;
+    margin-top: auto;
 }
