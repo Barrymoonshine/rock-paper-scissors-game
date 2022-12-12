@@ -9,7 +9,7 @@ body {
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0px;
-    color: white;
+    color: lightgray;
     background-color: #000000;
 background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -25,7 +25,7 @@ background-image: url("https://www.transparenttextures.com/patterns/brick-wall-d
     display: flex;
     justify-content: center;
     background: #080a0cfb;
-    color:rgb(247, 185, 109);
+    color:rgb(247, 140, 10);
 }
 
 .sub-header {
@@ -43,8 +43,7 @@ background-image: url("https://www.transparenttextures.com/patterns/brick-wall-d
     gap:20px;
 }
 
-.rock {
-    background-image: url(images/rock.png);
+.rock, .paper, .scissors {
     background-size:50%;
     background-color: bisque;
     background-repeat: no-repeat;
@@ -53,28 +52,29 @@ background-image: url("https://www.transparenttextures.com/patterns/brick-wall-d
     height: 200px;
     width: 200px;
     border: none;
+    cursor:pointer;
+}
+
+.rock:hover{
+    border:5px solid grey;
+}
+
+.rock {
+    background-image: url(images/rock.png);
+}
+
+.paper:hover{
+    border:5px solid grey;
 }
 
 .paper {
     background-image: url(images/paper.png);
-    background-size:50%;
-    background-color: bisque;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    background-position: 50% 50%;
-    height: 200px;
-    width: 200px;
-    border: none;
+}
+
+.scissors:hover{
+    border:5px solid grey;
 }
 
 .scissors {
     background-image: url(images/scissors.png);
-    background-size:50%;
-    background-color: bisque;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    background-position: 50% 50%;
-    height: 200px;
-    width: 200px;
-    border: none;
 }
