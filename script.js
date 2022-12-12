@@ -48,7 +48,7 @@ function playRound(playerSelection, computerSelection) {
  }
   else if (playerScore == 4 && computerScore < 4) {
     if ((playerSelection === `rock` && computerSelection === `scissors`) || (playerSelection === `paper` && computerSelection === `rock`) || (playerSelection === `scissors` && computerSelection === `paper`)) {
-      return [playerScore +=1, container.innerHTML += `Player wins ${playerSelection} beats ${computerSelection}, the players' score is ${playerScore} and the computers' score is ${computerScore}. <br /> <h2> The humans have won to fight another day! <h2>`];
+      return [playerScore +=1, container.innerHTML += `Player wins ${playerSelection} beats ${computerSelection}, the players' score is ${playerScore} and the computers' score is ${computerScore}. <br /> <h2> You beat the super-computer, congrats! <h2>`];
   } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
       return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br />`];
   } else if (playerSelection === computerSelection ) {
@@ -59,7 +59,7 @@ function playRound(playerSelection, computerSelection) {
     if ((playerSelection === `rock` && computerSelection === `scissors`) || (playerSelection === `paper` && computerSelection === `rock`) || (playerSelection === `scissors` && computerSelection === `paper`)) {
       return [playerScore +=1, container.innerHTML += `Player wins ${playerSelection} beats ${computerSelection}, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`];
   } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
-      return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br /> <h2> The computers have won, run for your life! <h2>`];
+      return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br /> <h2> The super-computer has won, run for your life! <h2>`];
   } else if (playerSelection === computerSelection ) {
      return container.innerHTML += `It's a draw, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`;
   }
@@ -93,6 +93,4 @@ function resetBtnVisibility () {
     resetBtn.style.visibility = 'visible';
   }
 }
-
-
 
