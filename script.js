@@ -25,7 +25,7 @@ function playerSelectionPaper() {
 
 btnPaper[0].addEventListener('click', playerSelectionPaper);
 
-const btnScissors = document.getElementsByClassName('Scissors');
+const btnScissors = document.getElementsByClassName('scissors');
 
 function playerSelectionScissors() {
     playRound(`scissors`,getComputerChoice());
