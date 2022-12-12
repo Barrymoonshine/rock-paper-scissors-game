@@ -1,4 +1,3 @@
-
 const computerOptions = [`rock`, `paper`, `scissors`];
 
 function getComputerChoice() {
@@ -12,6 +11,7 @@ const btnRock = document.getElementsByClassName('rock');
 
 function playerSelectionRock() {
     playRound(`rock`,getComputerChoice());
+    resetBtnVisibility ();
 }
 
 btnRock[0].addEventListener("click", playerSelectionRock);
@@ -20,6 +20,7 @@ const btnPaper = document.getElementsByClassName('paper');
 
 function playerSelectionPaper() {
     playRound(`paper`,getComputerChoice());
+    resetBtnVisibility ();
 }
 
 btnPaper[0].addEventListener('click', playerSelectionPaper);
@@ -28,6 +29,7 @@ const btnScissors = document.getElementsByClassName('Scissors');
 
 function playerSelectionScissors() {
     playRound(`scissors`,getComputerChoice());
+    resetBtnVisibility ();
 }
 
 btnScissors[0].addEventListener('click', playerSelectionScissors);
@@ -72,3 +74,25 @@ function playRound(playerSelection, computerSelection) {
   }  
 }
 }
+
+const btnReset = document.getElementById('resetBtn');
+
+function resetGame() {
+  window.location.reload();
+}
+
+btnReset.addEventListener("click", resetGame);
+
+resetBtn.style.visibility = 'hidden';
+
+function resetBtnVisibility () {
+  if (playerScore < 5 && computerScore < 5) {
+    resetBtn.style.visibility = 'hidden';
+  }
+  else {
+    resetBtn.style.visibility = 'visible';
+  }
+}
+
+
+
