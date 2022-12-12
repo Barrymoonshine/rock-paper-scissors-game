@@ -1,0 +1,137 @@
+[33mcommit bab7700828383916e0c11cd0cbfa5bc8aebb6eda[m[33m ([m[1;36mHEAD -> [m[1;32mrps-ui[m[33m)[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 16:50:10 2022 +0000
+
+    Footer added and styling applied
+
+[33mcommit eb9d75a86c0ab22076365068461a07c05e1c230e[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 16:30:08 2022 +0000
+
+    Styling applied to play again button
+
+[33mcommit 7e33d1e59d44052853099ba658da479b2cd7a51a[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 16:19:30 2022 +0000
+
+    further styling applied to rock, paper and scissors buttons
+
+[33mcommit bff5630d9065b2c3fefc195db0aa6d83d8a1bbb3[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 16:13:42 2022 +0000
+
+    Styling applied to rock, paper, scissors buttons
+
+[33mcommit 1331db03d663a81b80d4dde201b54d420f0893ee[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 14:46:07 2022 +0000
+
+    Styling applied to sub-header
+
+[33mcommit b5604f3be24dcc095825e6a1b044edcbf154899f[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 14:09:29 2022 +0000
+
+    Styling applied to header
+
+[33mcommit 1860b3d01d1ce86a3a2f783a9eadf8672561e8c3[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 11:04:10 2022 +0000
+
+    Reset game button hidden until either score has reached 5
+
+[33mcommit b9cd1de7659180538a5502e9fd7d949c7b62e5a3[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 09:36:20 2022 +0000
+
+    Player and computer score now re-confirmed on draw rounds
+
+[33mcommit 39ac5d689573d6ec4525bf3cb8626a62a5d4c58c[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Mon Dec 12 09:33:22 2022 +0000
+
+    Logic to play up to a total of 5 wins added
+
+[33mcommit d2d9a84770062ccc35e28122fd8d092b2e34514a[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 8 17:10:12 2022 +0000
+
+    Basic UI for game created
+
+[33mcommit 61223d05e76cf3b5454691110e060c9045d27dd2[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 8 10:22:26 2022 +0000
+
+    Added event listener which calls playRound to buttons
+
+[33mcommit 75f86ed24f558070919ab913c2f88985bfbf3859[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 8 10:14:43 2022 +0000
+
+    Created player selection buttons
+
+[33mcommit 85ff54ad3b0bdfe9a880464f4342b2cb29fb54ca[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 8 10:12:50 2022 +0000
+
+    Created basic html structure and commented out logic to play five games only
+
+[33mcommit f21a0f0579989435da1e2229851a8b410d0f3a22[m[33m ([m[1;31morigin/rps-ui[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Fri Dec 2 15:25:27 2022 +0000
+
+    Negative space removed becuase use of ;
+
+[33mcommit bb9b6bf8314bce6a946235590c5f7f7a71c169a8[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Fri Dec 2 15:22:58 2022 +0000
+
+    Changed computerSelection to lower case to improve readability when logging in the console
+
+[33mcommit 5bee8343ba3c5710d01ec9ecafe23ccd453f243d[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Fri Dec 2 15:12:27 2022 +0000
+
+    Template literals added to playRound function
+
+[33mcommit b1b175350dbe66845387be30b7c131aa6c1bdcbb[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Fri Dec 2 14:56:50 2022 +0000
+
+    If statements grouped to avoid duplication, inserting variable into string bug to be fixed
+
+[33mcommit f41f5d6d7bb511aef0034a6ce00777a2740224c4[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Fri Dec 2 14:48:42 2022 +0000
+
+    Readability of playRound function improved with use of strict not equals operator
+
+[33mcommit 65b4481a4e16508306202fd57860890e2354f0d1[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 1 14:34:03 2022 +0000
+
+    Copy and pasted saved code from local file, lost previous repo and commit history due to laptop crashing whilst writing code
+
+[33mcommit 5250dfc1da8135fee2ea7def47073496a66a1d02[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 1 13:06:52 2022 +0000
+
+    Psuedo code created
+
+[33mcommit 07591e8072302b3df985acd09512176f2f63c76e[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 1 13:03:26 2022 +0000
+
+    Linked index and script files
+
+[33mcommit 7acb86ce4f9d0e467d14071e913277a2130b2e67[m
+Author: Nick Sheward <nickshwrd@gmail.com>
+Date:   Thu Dec 1 13:01:39 2022 +0000
+
+    File structure created
+
+[33mcommit d615b1e07cd3d870539bed0218fbd35ac8129c26[m
+Author: Barrymoonshine <112389199+Barrymoonshine@users.noreply.github.com>
+Date:   Thu Dec 1 12:56:23 2022 +0000
+
+    Initial commit
