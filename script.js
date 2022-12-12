@@ -35,7 +35,7 @@ btnScissors[0].addEventListener('click', playerSelectionScissors);
 const container = document.querySelector('#container');
 
 function playRound(playerSelection, computerSelection) {
- if (playerScore < 5 && computerScore < 5) {
+ if (playerScore < 4 && computerScore < 4) {
     if ((playerSelection === `rock` && computerSelection === `scissors`) || (playerSelection === `paper` && computerSelection === `rock`) || (playerSelection === `scissors` && computerSelection === `paper`)) {
         return [playerScore +=1, container.innerHTML += `Player wins ${playerSelection} beats ${computerSelection}, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`];
     } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
@@ -43,14 +43,32 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === computerSelection ) {
        return container.innerHTML += `It's a draw <br />`;
     }
+ }
+  else if (playerScore == 4 && computerScore < 4) {
+    if ((playerSelection === `rock` && computerSelection === `scissors`) || (playerSelection === `paper` && computerSelection === `rock`) || (playerSelection === `scissors` && computerSelection === `paper`)) {
+      return [playerScore +=1, container.innerHTML += `Player wins ${playerSelection} beats ${computerSelection}, the players' score is ${playerScore} and the computers' score is ${computerScore}. <br /> <h2> The humans have won to fight another day! <h2>`];
+  } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
+      return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br />`];
+  } else if (playerSelection === computerSelection ) {
+     return container.innerHTML += `It's a draw <br />`;
   }
-  else if (playerScore == 5 && computerScore != 5) {
-    return container.innerHTML += `The humans have won to fight another day!`;
+}
+  else if (playerScore < 4 && computerScore == 4) { 
+    if ((playerSelection === `rock` && computerSelection === `scissors`) || (playerSelection === `paper` && computerSelection === `rock`) || (playerSelection === `scissors` && computerSelection === `paper`)) {
+      return [playerScore +=1, container.innerHTML += `Player wins ${playerSelection} beats ${computerSelection}, the players' score is ${playerScore} and the computers' score is ${computerScore} <br />`];
+  } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
+      return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br /> <h2> The computers have won, run for your life! <h2>`];
+  } else if (playerSelection === computerSelection ) {
+     return container.innerHTML += `It's a draw <br />`;
   }
-  else if (computerScore == 5 && playerScore != 5) {
-    return container.innerHTML += `The computers have won, run for your life!`;
-  }
-  else if (playerScore == 5 && computerScore == 5) {
-  return container.innerHTML += `It's a draw!... Fight again?`;
-  }
+}
+  else if (playerScore == 4 && computerScore == 4) { 
+    if ((playerSelection === `rock` && computerSelection === `scissors`) || (playerSelection === `paper` && computerSelection === `rock`) || (playerSelection === `scissors` && computerSelection === `paper`)) {
+      return [playerScore +=1, container.innerHTML += `Player wins ${playerSelection} beats ${computerSelection}, the players' score is ${playerScore} and the computers' score is ${computerScore}. <br /> <h2> The humans have won to fight another day! <h2>`];
+  } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
+      return [computerScore +=1, container.innerHTML += `Computer wins ${computerSelection} beats ${playerSelection}, the computers' score is ${computerScore} and the players' score is ${playerScore} <br /> <h2> The computers have won, run for your life! <h2>`];
+  } else if (playerSelection === computerSelection ) {
+     return container.innerHTML += `It's a draw <br />`;
+  }  
+}
 }
