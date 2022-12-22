@@ -41,7 +41,7 @@ body {
     gap:20px;
 }
 
-.rock, .paper, .scissors {
+#rock, #paper, #scissors {
     background-size:50%;
     background-color: bisque;
     background-repeat: no-repeat;
@@ -53,27 +53,27 @@ body {
     cursor:pointer;
 }
 
-.rock:hover{
+#rock:hover{
     border:5px solid grey;
 }
 
-.rock {
+#rock {
     background-image: url(images/rock.png);
 }
 
-.paper:hover{
+#paper:hover{
     border:5px solid grey;
 }
 
-.paper {
+#paper {
     background-image: url(images/paper.png);
 }
 
-.scissors:hover{
+#scissors:hover{
     border:5px solid grey;
 }
 
-.scissors {
+#scissors {
     background-image: url(images/scissors.png);
 }
 

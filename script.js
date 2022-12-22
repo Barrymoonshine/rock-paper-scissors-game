@@ -7,32 +7,40 @@ function getComputerChoice() {
 let playerScore = 0;
 let computerScore = 0;
 
-const btnRock = document.getElementsByClassName(`rock`);
+let allBtns = document.querySelectorAll('button');
 
-function playerSelectionRock() {
-  playRound(`rock`,getComputerChoice());
-  resetBtnVisibility ();
+for (i of allBtns) {
+  i.addEventListener('click', (e) => {
+    playRound(e.target.id, getComputerChoice());
+  });
 }
 
-btnRock[0].addEventListener(`click`, playerSelectionRock);
+// const btnRock = document.getElementsByClassName(`rock`);
 
-const btnPaper = document.getElementsByClassName(`paper`);
+// function playerSelectionRock() {
+//   playRound(`rock`,getComputerChoice());
+//   resetBtnVisibility ();
+// }
 
-function playerSelectionPaper() {
-  playRound(`paper`,getComputerChoice());
-  resetBtnVisibility ();
-}
+// btnRock[0].addEventListener(`click`, playerSelectionRock);
 
-btnPaper[0].addEventListener(`click`, playerSelectionPaper);
+// const btnPaper = document.getElementsByClassName(`paper`);
 
-const btnScissors = document.getElementsByClassName(`scissors`);
+// function playerSelectionPaper() {
+//   playRound(`paper`,getComputerChoice());
+//   resetBtnVisibility ();
+// }
 
-function playerSelectionScissors() {
-  playRound(`scissors`,getComputerChoice());
-  resetBtnVisibility ();
-}
+// btnPaper[0].addEventListener(`click`, playerSelectionPaper);
 
-btnScissors[0].addEventListener(`click`, playerSelectionScissors);
+// const btnScissors = document.getElementsByClassName(`scissors`);
+
+// function playerSelectionScissors() {
+//   playRound(`scissors`,getComputerChoice());
+//   resetBtnVisibility ();
+// }
+
+// btnScissors[0].addEventListener(`click`, playerSelectionScissors);
 
 const container = document.querySelector(`#container`);
 
@@ -93,4 +101,3 @@ function resetBtnVisibility () {
     resetBtn.style.visibility = `visible`;
   }
 }
-
