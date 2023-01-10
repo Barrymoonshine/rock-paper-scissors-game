@@ -44,9 +44,13 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  if ((playerSelection === `rock` && computerSelection === `scissors`) || (playerSelection === `paper` && computerSelection === `rock`) || (playerSelection === `scissors` && computerSelection === `paper`)) {
+  if ((playerSelection === `rock` && computerSelection === `scissors`)
+    || (playerSelection === `paper` && computerSelection === `rock`)
+    || (playerSelection === `scissors` && computerSelection === `paper`)) {
     [playerScore += 1, container.innerHTML = `You win ${playerSelection} beats ${computerSelection}! Your score is: ${playerScore}, the computers' score is: ${computerScore}. <br /> <br />`];
-  } else if ((playerSelection === `rock` && computerSelection === `paper`) || (playerSelection === `paper` && computerSelection === `scissors`) || (playerSelection === `scissors` && computerSelection === `rock`)) {
+  } else if ((playerSelection === `rock` && computerSelection === `paper`)
+    || (playerSelection === `paper` && computerSelection === `scissors`)
+    || (playerSelection === `scissors` && computerSelection === `rock`)) {
     [computerScore += 1, container.innerHTML = `You lose ${computerSelection} beats ${playerSelection}! Your score is: ${playerScore}, the computers' score is: ${computerScore}. <br /> <br />`];
   } else if (playerSelection === computerSelection) {
     container.innerHTML = [`It's a draw.  Your score is: ${playerScore}, the computers' score is: ${computerScore}. <br /> <br />`];
